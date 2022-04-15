@@ -1,0 +1,30 @@
+.capsule {
+    background-color: #441601;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    border-radius: 5rem;
+    align-items: center;
+}
+
+.capsule img {
+    width: 18px;
+    height: 18px;
+}
+
+.capsule .your-cart {
+    margin: 0rem 0.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: small;
+}
+
+.capsule .cart-counter {
+    background-color: #802606;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5rem;
+    font-weight: bolder;
+    font-size: smaller;
+}
