@@ -1,0 +1,19 @@
+.welcome-banner {
+    background-color: #393E44;
+    width: 35%;
+    margin: 15vh auto 40px auto;
+    align-items: center;
+    padding: 1.5rem 0.3rem;
+    border-radius: 4px;
+}
+
+.welcome-banner h2 {
+    color: white;
+    text-align: center;
+}
+
+.welcome-banner p {
+    padding-top: 0.5rem;
+    color: white;
+    text-align: center;
+}

@@ -1,11 +1,16 @@
+import React from "react";
 import "./App.css";
 import Header from "./components/ui/Header";
+import MealsCatalogue from "./components/ui/meals/MealsCatalogue";
+import WelcomeBanner from "./components/ui/WelcomeBanner";
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Header />
-    </div>
+      <WelcomeBanner />
+      <MealsCatalogue />
+    </React.Fragment>
   );
 }
 

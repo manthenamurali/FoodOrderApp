@@ -1,0 +1,61 @@
+.meals-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.meals-item-left {
+    width: 75%;
+}
+
+.meals-item-right {
+    width: 25%;
+}
+
+.quantity-label {
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.title {
+    padding-top: 1.5rem;
+    font-weight: bold;
+}
+
+.summary {
+    font-style: italic;
+    padding: 0.5rem 0;
+}
+
+.amount {
+    font-weight: bolder;
+    color: red;
+    padding-bottom: 1rem;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+.meals-item-right label {
+    font-size: small;
+    font-weight: bold;
+}
+
+.meals-item-right input {
+    width: 3rem;
+    margin-left: 0.5rem;
+    font-size: small;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+.meals-item-right .add-button {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    float: right;
+}

@@ -1,0 +1,8 @@
+.styled-button {
+    background-color: #802606;
+    border-radius: 5rem;
+    border: 1px solid #802606;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem 2rem;
+}
