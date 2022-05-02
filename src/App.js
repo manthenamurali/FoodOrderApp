@@ -5,11 +5,13 @@ import MealsCatalogue from "./components/ui/meals/MealsCatalogue";
 import WelcomeBanner from "./components/ui/WelcomeBanner";
 
 function App() {
+  const mealsAddedToCart = [];
+
   return (
     <React.Fragment>
       <Header />
       <WelcomeBanner />
-      <MealsCatalogue />
+      <MealsCatalogue itemsAddedToCart={mealsAddedToCart} />
     </React.Fragment>
   );
 }

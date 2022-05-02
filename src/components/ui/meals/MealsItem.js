@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./MealsItem.css";
 import Button from "../../widgets/Button";
+import Utils from "../../../common/Utils";
+import Alerts from "../../../common/Alerts";
 
 const MealsItem = (props) => {
-  console.log(props.item.itemName);
+  const [showAlert, setShowAlert] = useState(false);
+  const quantityRef = useRef();
+
+  const addMealItemListener = (event) => {
+    console.log("Quantity changed -> " + quantityRef.current.value);
+    validateQuantity();
+  };
+
+  function validateQuantity() {
+    if (Utils.validateQuantity(quantityRef.current.value)) {
+      props.itemAddListener({
+        ...props.item,
+        userEnteredQuantity: quantityRef.current.value,
+      });
+    } else {
+      setShowAlert(true);
+    }
+  }
+
+  const dismissAlertHandler = () => {
+    setShowAlert(false);
+  };
+
   return (
     <React.Fragment>
       <div className="meals-item">
@@ -15,12 +39,25 @@ const MealsItem = (props) => {
         <div className="meals-item-right">
           <div className="quantity-label">
             <label>Quantity</label>
-            <input type="number" min="1" max="10" value="1"></input>
+            <input type="number" min="1" max="10" ref={quantityRef}></input>
           </div>
-          <Button className="add-button">+ Add</Button>
+          <Button
+            buttonClickListener={addMealItemListener}
+            className="add-button"
+          >
+            + Add
+          </Button>
         </div>
       </div>
       <div className="divider" />
+      {showAlert && (
+        <Alerts
+          title="Alert"
+          message="Invalid Quantity"
+          okButton="Ok"
+          dismissHandler={dismissAlertHandler}
+        />
+      )}
     </React.Fragment>
   );
 };
