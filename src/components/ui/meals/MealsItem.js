@@ -9,7 +9,6 @@ const MealsItem = (props) => {
   const quantityRef = useRef();
 
   const addMealItemListener = (event) => {
-    console.log("Quantity changed -> " + quantityRef.current.value);
     validateQuantity();
   };
 
@@ -19,6 +18,9 @@ const MealsItem = (props) => {
         ...props.item,
         userEnteredQuantity: quantityRef.current.value,
       });
+      console.log(
+        `item ${props.item.itemName} add to cart with quantity ${quantityRef.current.value}`
+      );
     } else {
       setShowAlert(true);
     }
@@ -53,7 +55,7 @@ const MealsItem = (props) => {
       {showAlert && (
         <Alerts
           title="Alert"
-          message="Invalid Quantity"
+          message="Invalid Quantity. Must be greater than or equal to 1"
           okButton="Ok"
           dismissHandler={dismissAlertHandler}
         />

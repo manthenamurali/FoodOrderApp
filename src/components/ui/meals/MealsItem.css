@@ -22,28 +22,31 @@
 
 .title {
     padding-top: 1.5rem;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .summary {
+    font-size: large;
     font-style: italic;
     padding: 0.5rem 0;
 }
 
 .amount {
+    font-size: larger;
     font-weight: bolder;
-    color: red;
+    color: #AD5503;
     padding-bottom: 1rem;
 }
 
 .divider {
     height: 1px;
-    background-color: rgba(211, 211, 211, 0.3);
+    background-color: rgba(211, 211, 211);
 }
 
 .meals-item-right label {
-    font-size: small;
-    font-weight: bold;
+    font-size: medium;
+    padding-top: 4px;
+    font-weight: bolder;
 }
 
 .meals-item-right input {
@@ -52,10 +55,15 @@
     font-size: small;
     font-weight: bold;
     padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
 }
 
 .meals-item-right .add-button {
     margin-top: 0.5rem;
     margin-right: 0.5rem;
     float: right;
+    font-size: large;
 }

@@ -9,16 +9,26 @@ export const SimpleAlert = (props) => {
     <CardView className="alert-overlay">
       <p className="alert-overlay-title">{props.title}</p>
       <p className="alert-overlay-message">{props.message}</p>
-      <Button buttonClickListener={props.dismissHandler}>
-        {props.okButton}
-      </Button>
+      <footer>
+        <Button buttonClickListener={props.dismissHandler}>
+          {props.okButton}
+        </Button>
+      </footer>
     </CardView>
   );
+};
+
+const BlurBG = () => {
+  return <div className="blur-bg" />;
 };
 
 const Alerts = (props) => {
   return (
     <React.Fragment>
+      {ReactDOM.createPortal(
+        <BlurBG />,
+        document.getElementById("overlay_root")
+      )}
       {ReactDOM.createPortal(
         <SimpleAlert
           title={props.title}
@@ -26,7 +36,7 @@ const Alerts = (props) => {
           okButton={props.okButton}
           dismissHandler={props.dismissHandler}
         />,
-        document.getElementById("alert_root")
+        document.getElementById("overlay_root")
       )}
     </React.Fragment>
   );

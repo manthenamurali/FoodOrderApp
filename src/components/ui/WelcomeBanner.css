@@ -1,15 +1,19 @@
 .welcome-banner {
-    background-color: #393E44;
-    width: 35%;
-    margin: 15vh auto 40px auto;
+    background-color: #383838;
+    width: 40%;
+    margin: -15vh auto 40px auto;
     align-items: center;
     padding: 1.5rem 0.3rem;
-    border-radius: 4px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.337);
+    position: relative;
 }
 
 .welcome-banner h2 {
     color: white;
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .welcome-banner p {
