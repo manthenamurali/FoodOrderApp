@@ -12,7 +12,7 @@ const Header = () => {
     <div>
       <header className="header">
         <h1>ReactMeals</h1>
-        <YourCartCapsule cartcount={cartContext.itemsAddedToCart.length} />
+        <YourCartCapsule cartcount={cartContext.cartItems.length} />
       </header>
       <img className="header-img" src={bgimage} alt="meals back image" />
     </div>

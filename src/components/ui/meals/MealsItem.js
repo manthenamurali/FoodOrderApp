@@ -1,10 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import "./MealsItem.css";
 import Button from "../../widgets/Button";
 import Utils from "../../../common/Utils";
 import Alerts from "../../../common/Alerts";
+import CatalogueContext from "../../../components/contexts/CatalogueContext";
 
 const MealsItem = (props) => {
+  const catalogueCtxt = useContext(CatalogueContext);
   const [showAlert, setShowAlert] = useState(false);
   const quantityRef = useRef();
 
@@ -14,10 +16,11 @@ const MealsItem = (props) => {
 
   function validateQuantity() {
     if (Utils.validateQuantity(quantityRef.current.value)) {
-      props.itemAddListener({
+      catalogueCtxt.itemAddedHandler({
         ...props.item,
         userEnteredQuantity: quantityRef.current.value,
       });
+
       console.log(
         `item ${props.item.itemName} add to cart with quantity ${quantityRef.current.value}`
       );

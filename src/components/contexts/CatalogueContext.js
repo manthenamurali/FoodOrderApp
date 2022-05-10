@@ -1,7 +1,8 @@
 import React from "react";
 
 const CatalogueContext = React.createContext({
-  itemsAddedToCart: [],
+  cartItems: [],
+  itemAddedHandler: (item) => {},
 });
 
 export default CatalogueContext;

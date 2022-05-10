@@ -1,18 +1,16 @@
 import React from "react";
-import "./App.css";
 import Header from "./components/ui/Header";
 import MealsCatalogue from "./components/ui/meals/MealsCatalogue";
 import WelcomeBanner from "./components/ui/WelcomeBanner";
+import ContextProvider from "./components/contexts/ContextProvider";
 
 function App() {
-  const mealsAddedToCart = [];
-
   return (
-    <React.Fragment>
+    <ContextProvider>
       <Header />
       <WelcomeBanner />
-      <MealsCatalogue itemsAddedToCart={mealsAddedToCart} />
-    </React.Fragment>
+      <MealsCatalogue />
+    </ContextProvider>
   );
 }
 

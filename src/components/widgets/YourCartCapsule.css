@@ -6,6 +6,7 @@
     padding: 0.8rem 2.5rem;
     border-radius: 5rem;
     align-items: center;
+    cursor: pointer;
 }
 
 .capsule img {
@@ -21,6 +22,7 @@
 }
 
 .capsule .cart-counter {
+    width: 16px;
     background-color: #802606;
     padding: 0.5rem 1rem;
     color: white;
